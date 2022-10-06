@@ -4,7 +4,7 @@
   document.addEventListener('DOMContentLoaded', event => {
     let connectButton = document.querySelector("#connect");
     let statusDisplay = document.querySelector('#status');
-    let lightButton = document.querySelector('#light');
+    let ledButton = document.querySelector('#led');
     let toggle = 0;
     let port;
 
@@ -25,7 +25,7 @@
       });
     }
 
-    function onClick(){
+    ledButton.addEventListener('click', function() {
       if (!port) {
         return;
       }
@@ -43,8 +43,6 @@
       port.send(view);
 
     };
-
-    lightButton.addEventListener('click', onClick);
     connectButton.addEventListener('click', function() {
       if (port) {
         port.disconnect();
