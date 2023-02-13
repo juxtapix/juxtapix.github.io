@@ -42,7 +42,7 @@
       }
       port.send(view);
 
-    };
+    });
 
     connectButton.addEventListener('click', function() {
       if (port) {
