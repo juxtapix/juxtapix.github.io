@@ -7,7 +7,7 @@ let bitIndex = 0;
 function setup() {
   createCanvas(displayWidth, displayHeight);
   background(255);
-  frameRate(15);
+  frameRate(30);
   processedStr = processString(str);
 }
 
