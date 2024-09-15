@@ -11,6 +11,7 @@ var serial = {};
 
   serial.requestPort = function() {
     const filters = [
+      // -------------------------------------------- Arduino
       { 'vendorId': 0x2341, 'productId': 0x8036 }, // Arduino Leonardo
       { 'vendorId': 0x2341, 'productId': 0x8037 }, // Arduino Micro
       { 'vendorId': 0x2341, 'productId': 0x804d }, // Arduino/Genuino Zero
@@ -23,7 +24,14 @@ var serial = {};
       { 'vendorId': 0x2341, 'productId': 0x8055 }, // Arduino MKR NB 1500
       { 'vendorId': 0x2341, 'productId': 0x8056 }, // Arduino MKR Vidor 4000
       { 'vendorId': 0x2341, 'productId': 0x8057 }, // Arduino NANO 33 IoT
+      // -------------------------------------------- Adafruit
       { 'vendorId': 0x239A }, // Adafruit Boards!
+      // -------------------------------------------- FTDI
+      { 'vendorId': 0x0403 }, // FTDI Adapters
+      // -------------------------------------------- Silicon Labs
+      { 'vendorId': 0x10c4 }, // Silicon Labs Adapters
+      // -------------------------------------------- Prolific
+      { 'vendorId': 0x10c4 }, // Prolific Adapters
     ];
     return navigator.usb.requestDevice({ 'filters': filters }).then(
       device => new serial.Port(device)
