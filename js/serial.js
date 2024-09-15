@@ -27,7 +27,7 @@ var serial = {};
       // -------------------------------------------- Adafruit
       { 'vendorId': 0x239A }, // Adafruit Boards!
       // -------------------------------------------- FTDI
-      { 'vendorId': 0x0403 }, // FTDI Adapters
+      { 'vendorId': 0x0403, 'productId': 0x6001 }, // FTDI Adapter - "FT232R"
       // -------------------------------------------- Silicon Labs
       { 'vendorId': 0x10c4 }, // Silicon Labs Adapters
       // -------------------------------------------- Prolific
