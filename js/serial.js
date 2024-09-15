@@ -11,6 +11,7 @@ var serial = {};
 
   serial.requestPort = function() {
     const filters = [
+      // List of USB IDs: www.linux-usb.org/usb.ids
       // -------------------------------------------- Arduino
       { 'vendorId': 0x2341, 'productId': 0x8036 }, // Arduino Leonardo
       { 'vendorId': 0x2341, 'productId': 0x8037 }, // Arduino Micro
@@ -25,7 +26,7 @@ var serial = {};
       { 'vendorId': 0x2341, 'productId': 0x8056 }, // Arduino MKR Vidor 4000
       { 'vendorId': 0x2341, 'productId': 0x8057 }, // Arduino NANO 33 IoT
       // -------------------------------------------- Adafruit
-      { 'vendorId': 0x239A }, // Adafruit Boards!
+      { 'vendorId': 0x239A }, // Adafruit Boards
       // -------------------------------------------- FTDI
       { 'vendorId': 0x0403 }, // FTDI Adapters
       // -------------------------------------------- Silicon Labs
