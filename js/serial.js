@@ -32,6 +32,8 @@ var serial = {};
       { 'vendorId': 0x10c4 }, // Silicon Labs Adapters
       // -------------------------------------------- Prolific
       { 'vendorId': 0x10c4 }, // Prolific Adapters
+      // -------------------------------------------- WCH
+      { 'vendorId': 0x1a86 }, // WCH Adapters
     ];
     return navigator.usb.requestDevice({ 'filters': filters }).then(
       device => new serial.Port(device)
